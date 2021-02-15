@@ -1,8 +1,8 @@
-import { version } from 'html-webpack-plugin';
 import React, { Component } from 'react'
 import { fetchAPI } from '../../services/fetchAPI';
 import Header from '../../components/header/Header';
 import Form from '../../components/form/Form';
+import Results from '../../components/results/Results';
 import History from '../../components/history/History';
 
 export default class Home extends Component {

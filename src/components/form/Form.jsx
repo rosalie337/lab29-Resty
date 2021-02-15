@@ -1,4 +1,4 @@
-import React, { Component, forwardRef } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 const Form = ({ url, method, results, onSubmit, onChange}) => {
@@ -9,21 +9,27 @@ const Form = ({ url, method, results, onSubmit, onChange}) => {
                 <section>
                     <div>
                         <label>
-                            <input type="radio" name="method" value="GET" onChange={onChange} />
+                            GET
+                            <input type="radio" name="method" value="GET" checked={method === 'GET'} onChange={onChange} />
                         </label>
                         <label>
-                            <input type="radio" name="method" value="POST" onChange={onChange} />
+                            POST
+                            <input type="radio" name="method" value="POST" checked={method === 'POST'} onChange={onChange} />
                         </label>
                         <label>
-                            <input type="radio" name="method" value="PUT" onChange={onChange} />
+                            PUT
+                            <input type="radio" name="method" value="PUT" checked={method === 'PUT'} onChange={onChange} />
                         </label>
                         <label>
-                            <input type="radio" name="method" value="PATCH" onChange={onChange} />
+                            PATCH
+                            <input type="radio" name="method" value="PATCH" checked={method === 'PATCH'} onChange={onChange} />
                         </label>
                         <label>
-                            <input type="radio" name="method" value="DELETE" onChange={onChange} />
+                            DELETE
+                            <input type="radio" name="method" value="DELETE" checked={method === 'DELETE'} onChange={onChange} />
                         </label>
                     </div>
+                    <button>SEND</button>
                 </section>
                     <results name="results" value={results} onChange={onChange} />
             </form>

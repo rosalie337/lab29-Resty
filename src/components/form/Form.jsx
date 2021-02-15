@@ -31,7 +31,7 @@ const Form = ({ url, method, results, onSubmit, onChange}) => {
                     </div>
                     <button>SEND</button>
                 </section>
-                    <results name="results" value={results} onChange={onChange} />
+                    <textarea name="results" value={results} onChange={onChange} />
             </form>
         </section>
     );
@@ -40,7 +40,7 @@ const Form = ({ url, method, results, onSubmit, onChange}) => {
 Form.propTypes = {
     url: PropTypes.string.isRequired,
     method: PropTypes.string.isRequired,
-    results: PropTypes.string.isRequired,
+    results: PropTypes.string,
     onSubmit: PropTypes.func.isRequired,
     onChange: PropTypes.func.isRequired,
 };

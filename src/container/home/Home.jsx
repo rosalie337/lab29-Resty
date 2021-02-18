@@ -3,7 +3,6 @@ import { fetchAPI } from '../../services/fetchAPI';
 import Header from '../../components/header/Header';
 import Form from '../../components/form/Form';
 import Results from '../../components/results/Results';
-import History from '../../components/history/History';
 
 export default class Home extends Component {
 
@@ -79,7 +78,6 @@ export default class Home extends Component {
         return (
           <>
             <Header/>
-              <History history={history} onClick={this.handleClick} />
               <div>
                 <Form 
                   url={url} 

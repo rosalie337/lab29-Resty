@@ -79,8 +79,8 @@ export default class Home extends Component {
         return (
           <>
             <Header/>
-              <History history={history} onClick={this.handleClick} />
               <div>
+                <History history={history} onClick={this.handleClick} />
                 <Form 
                   url={url} 
                   method={method} 
